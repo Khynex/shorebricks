@@ -1,0 +1,407 @@
+:root {
+  --primary-color: rgba(13, 110, 139, 0.85);
+  --overlay-color: rgba(24, 39, 51, 0.95);
+  --overlay-color2: rgba(24, 39, 51, 0.70);
+  --overlay-color3: rgba(24, 39, 51, 0.40);
+  --menu-speed: 0.75s;
+}
+
+.values {
+  height: 300vh;
+  display: flex;
+}
+.values-title {
+  margin: 0!important;
+}
+
+.transform-style {
+  transform-style: preserve-3d;
+}
+
+.overlay-bg2 {
+  background-color: var(--overlay-color2);
+  min-width: 100vw;
+}
+
+.overlay-bg3 {
+  background-color: var(--overlay-color3);
+}
+
+}
+/* Hover underline effect  */
+.nav-links ul li a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 1px;
+  margin: auto;
+  background: #fff;
+  transition: 0.5s;
+}
+
+.nav-links ul li a:hover::after {
+  width: 100%;
+}
+/* hover effect ends */
+
+/* Keyframes */
+/* Hide text ~ Fade-in Fade-out */
+.fade-in {
+  animation: fadeIn 7s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.7;
+  }
+}
+
+.fade-in2 {
+  animation: fadeIn 3s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-out {
+  animation: fadeOut 15s;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.fade-out2 {
+  animation: fadeOut 20s;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.anime {
+  transform: translateX(-100%);
+  animation: left-to-right ease-in forwards 1.5s;
+}
+
+.anime2 {
+  transform: translateX(-100%);
+  animation: left-to-right ease-in forwards 2.5s;
+}
+.anime3 {
+  transform: translateX(-100%);
+  animation: left-to-right ease-in forwards 3s;
+}
+
+@keyframes left-to-right  {
+  from { 
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+ 
+}
+
+/* Slider scroll */
+.slider {
+  width: 800px;
+  height: 500px;
+  overflow: hidden;
+}
+
+.slides {
+  width: 500%;
+  height: 500px;
+  display: flex;
+}
+
+.slides input {
+  display: none;
+}
+
+.slide {
+  width: 20%;
+  transition: 2s;
+}
+
+.slide img {
+  width: 800px;
+  height: 500px;
+}
+
+/*css for manual slide navigation*/
+
+.navigation-manual {
+  position: absolute;
+  width: 800px;
+  margin-top: -40px;
+  display: flex;
+  justify-content: center;
+}
+
+.manual-btn {
+  /* border: 2px solid #e25822; */
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.manual-btn:not(:last-child) {
+  margin-left: 40px;
+}
+
+.manual-btn:hover {
+  /* background: #e25822; */
+}
+
+#radio1:checked ~ .first {
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+  margin-left: -20%;
+}
+
+#radio3:checked ~ .first {
+  margin-left: -40%;
+}
+
+#radio4:checked ~ .first {
+  margin-left: -60%;
+}
+
+/*css for automatic navigation*/
+
+.navigation-auto {
+  position: absolute;
+  display: flex;
+  width: 800px;
+  justify-content: center;
+  margin-top: 460px;
+}
+
+.navigation-auto div {
+  /* border: 2px solid #e25822; */
+  padding: 5px;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+.navigation-auto div:not(:last-child) {
+  margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+  /* background: #e25822; */
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+  /* background: #e25822; */
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+  /* background: #e25822; */
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4 {
+  /* background: ##e25822; */
+}
+
+/* utilities */
+.largeText {
+  font-size: 8rem;
+  line-height: 0.5em;
+  margin-bottom: 28px;
+}
+
+/* MENU STYLES */
+.menu-wrap {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.menu-wrap .toggler {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+}
+
+.menu-wrap .hamburger {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: 57px;
+  height: 30px;
+  margin: auto;
+  margin-top: 16.5px;
+  margin-right: 4px;
+  padding: 1rem;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hamburger Line */
+.menu-wrap .hamburger > div {
+  position: relative;
+  flex: none;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  display: flex;
+  align-items: end;
+  justify-content: flex-end;
+  transition: all 0.4s ease;
+}
+
+/* Hamburger Lines - Top & Bottom */
+.menu-wrap .hamburger > div::before,
+.menu-wrap .hamburger > div::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: -8px;
+  width: 100%;
+  height: 2px;
+  background: inherit;
+}
+
+/* Moves Line Down */
+.menu-wrap .hamburger > div::after {
+  top: 8px;
+}
+
+/* Toggler Animation */
+.menu-wrap .toggler:checked + .hamburger > div {
+  transform: rotate(135deg);
+}
+
+/* Turns Lines Into X */
+.menu-wrap .toggler:checked + .hamburger > div:before,
+.menu-wrap .toggler:checked + .hamburger > div:after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+/* Rotate On Hover When Checked */
+.menu-wrap .toggler:checked:hover + .hamburger > div {
+  transform: rotate(225deg);
+}
+
+/* Show Menu */
+.menu-wrap .toggler:checked ~ .menu {
+  visibility: visible;
+}
+
+.menu-wrap .toggler:checked ~ .menu > div {
+  transform: scale(1);
+  transition-duration: var(--menu-speed);
+}
+
+.menu-wrap .toggler:checked ~ .menu > div > div {
+  opacity: 1;
+  transition: opacity 0.4s ease 0.4s;
+}
+
+.menu-wrap .menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-wrap .menu > div {
+  background: var(--overlay-color);
+  width: 200vw;
+  height: 200vw;
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+  transition: all 0.4s ease;
+}
+
+.menu-wrap .menu > div > div {
+  text-align: center;
+  max-width: 90vw;
+  max-height: 100vh;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.menu-wrap .menu > div > div > ul > li {
+  list-style: none;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+.menu-wrap .menu > div > div > ul > li > a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.4s ease;
+}
+
+.menu-wrap .menu > div > div > ul > li > a:hover {
+  border: 2px solid #e25822;
+  padding: 2px 20px;
+  transition: 0.6s ease;
+  border-radius: 5px;
+  font-size: 1.4rem;
+}
+
+.move-down {
+  position: absolute;
+  bottom: 220px;
+}
+
+.overlay-color {
+  background-color: var(--overlay-color);
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+}
+/* Show the dropdown menu on hover */
+.dropdown:hover div.dropdown-content {display: flex;}
+
+ 

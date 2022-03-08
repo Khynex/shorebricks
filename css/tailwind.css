@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn {
+  @apply rounded-lg transform transition duration-500 hover:scale-95 text-white py-2 px-4;
+}
+
+.btn2 {
+  @apply rounded-lg transform transition duration-500 hover:scale-95 text-white py-1 px-6;
+}
+
+.btn3 {
+  @apply rounded-full transform transition duration-500 hover:scale-95 text-white text-lg py-4 px-6;
+}
+
+.nav-up {
+  @apply -top-10;
+}
+
+.card {
+  @apply relative bg-white overflow-hidden rounded shadow-lg flex flex-col items-center justify-center text-compcolor w-full h-72 object-cover hover:bg-gray-400;
+}
+
+.card-content {
+  @apply absolute py-16 px-24 text-white z-40 flex flex-col justify-center items-center transition ease-in duration-1000;
+}

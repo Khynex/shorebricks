@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;1,400&family=Open+Sans:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500&display=swap"
+        rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rancho&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;1,400&family=Open+Sans:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://kit.fontawesome.com/e6258a65d6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/styles2.css">
+    <title>About Shorebricks | Mision and Vision</title>
+
+    <style>
+        .parallax {
+            /* The image used */
+            background-image: url("img/office.jpg");
+            /* Set a specific height */
+            min-height: 500px;
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            ;
+        }
+        
+        .parallax2 {
+            /* The image used */
+            background-image: url("img/house5.JPG");
+            /* Set a specific height */
+            min-height: 500px;
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        .parallax3 {
+            /* The image used */
+            background-image: url("img/house5.JPG");
+            /* Set a specific height */
+            min-height: 400px;
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        .parallax4 {
+            /* The image used */
+            background-image: url("img/house16.JPG");
+            /* Set a specific height */
+            min-height: 700px;
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+
+</head>
+
+<body class="font-nunito text-white bg-white">
+
+    <!-- Header -->
+
+    <header class="nav-down fixed top-0 left-0 w-full bg-input
+        text-white font-nunito z-40 transition-all ease-in duration-500">
+        <div class="mx-auto px-8 md:px-14 lg:px-12 xl:px-16 py-4 lg:py-0 flex justify-between items-center">
+            <!-- Logo -->
+
+            <a href="index.html" class=""><img src="img/logo3.png" alt="" class="w-32 md:w-40 xl:w-50 object-cover md:block mb-1 z-50" /></a>
+
+            <!-- Sidebar Menu -->
+            <div class="menu-wrap relative top-0 left-0 h-full lg:hidden z-50">
+                <input type="checkbox" class="toggler">
+                <div class="hamburger">
+                    <div></div>
+                </div>
+                <div class="menu">
+                    <div>
+                        <div>
+                            <ul>
+                                <li class="text-hover"><a href="index.html" class="text-change hover:text-compcolor">Home</a></li>
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="services.html">Services</a></li>
+                                <li><a href="projects.html">Projects</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+
+                            </ul>
+                            <div class=" lg:block mt-8 bg-compcolor">
+
+                                <button class="btn2"><a href="contact2.html">Schedule Appointment</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Navigation -->
+
+            <nav class="relative hidden lg:flex items-center justify-center uppercase nav-links text-xs lg:text-sm cursor-pointer z-40 nav_bar">
+                <ul class="md:flex justify-center items-center space-x-6 lg:space-x-12 ml-12 xl:ml-50">
+                    <li class="hover:text-compcolor"><a href="index.html">Home</a></li>
+                    <li class="hover:text-compcolor"><a href="about.html">About Us</a></li>
+                    <li class="hover:text-compcolor overflow-auto"><a href="projects.html">Projects</a></li>
+
+                    <li class="relative hover:text-compcolor flex justify-start  z-20 dropdown overflow-visible py-5 p-0 my-0">
+
+                        <a href="" class="dropdown">Services</a>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 font-bold ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                </svg>
+
+                        <div class="absolute bg-gray-200 top-auto flex flex-col rounded w-64 mt-10 p-3 py- text-sm text-input font-bold dropdown-content z-50  animate__animated animate__fadeIn">
+
+                            <a href="design-build.html" class="px-2 py-3 hover:bg-compcolor hover:opacity-95 hover:text-white rounded">Design-Build Services</a>
+                            <a href="homeremodlling.html" class="px-2 py-3 hover:bg-compcolor hover:opacity-95 hover:text-white rounded">Home Remodelling</a>
+                            <a href="realestate.html" class="px-2 py-3 hover:bg-compcolor hover:opacity-95 hover:text-white rounded">Real Estate </a>
+                            <a href="constructionmanagement.html" class="px-2 py-3 hover:bg-compcolor hover:opacity-95 hover:text-white rounded text-sm">Construction Management</a>
+                            <a href="consultancy.html" class="px-2 py-3 hover:bg-compcolor hover:opacity-95 hover:text-white rounded">Consultancy Services</a>
+                        </div>
+
+                    </li>
+                    <li class="hover:text-compcolor animate-wiggle">
+                        <a href="contact.html">Contact US</a></li>
+                </ul>
+
+            </nav>
+
+
+            <!-- Social icons -->
+            <div class="space-x-6 xl:flex mt-3 px-4 hidden text-sm ">
+                <div class="animate-bounce3 "><a href="https://www.twitter.com/shorebricks " class="opacity-60 hover:opacity-100 text-blue-300 "><i class="fa fa-twitter fa-2x " aria-hidden="true "></i></a></div>
+                <div class="animate-bounce4 ">
+                    <a href="https://www.facebook.com/shorebricks " class="opacity-60 hover:opacity-100 ">
+                        <i class="fa fa-facebook-official fa-2x " aria-hidden="true "></i>
+                    </a>
+                </div>
+                <div class="animate-bounce3 ">
+                    <a href="https://www.instagram.com/shorebricks " class="opacity-60 hover:opacity-100 text-instagram "><i class="fa fa-instagram fa-2x " aria-hidden="true "></i></a>
+                </div>
+            </div>
+
+            <div class="hidden xl:block">
+
+                <button class="ring-2 ring-gray-600 btn2"><a href="contact2.html">Schedule Appointment</a></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Header ends -->
+
+    <!-- Hero -->
+
+    <section class="mx-auto parallax flex items-center mb-10 bg-fixed bg-center bg-cover overflow-hidden">
+        <div class="overlay-bg3 py-32 w-full text-3xl lg:text-5xl text-white">
+            <h1 class="ml-12 lg:ml-32 uppercase font-bold font-sans">About Us
+            </h1>
+        </div>
+    </section>
+
+    <!-- About grid section -->
+    <!-- <section class="max-w-full px-12 lg:px-24 m-auto text-black grid md:grid-cols-2 lg:grid-cols-4 gap-8 justify-center mb-12">
+        <div>
+            <h2 class="text-xl font-bold mb-2">Our company</h2>
+            <p class="mb-2">Stay informed about Shorebricks - from company background to projects and more</p>
+
+            <span class="flex font-bold text-compcolor hover:underline">
+              <a href="company.html">Explore Shorebricks</a>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </span>
+
+        </div>
+
+        <div>
+            <h2 class="text-xl font-bold mb-2">Who we are</h2>
+            <p class="mb-2">Get to explore the engaging stories and meet the people who shape our vision</p>
+
+            <span class="flex font-bold text-compcolor hover:underline">
+            <a href="company.html">Meet the Shorebricks Team</a>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </span>
+
+        </div>
+
+        <div>
+            <h2 class="text-xl font-bold mb-2">What we value</h2>
+            <p class="mb-2">See how we ensure quality performance, effective management and delivery of high standard results, in a safe working environment</p>
+
+            <span class="flex font-bold text-compcolor hover:underline">
+            <a href="company.html">Learn about our values</a>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </span>
+
+        </div>
+
+        <div>
+            <h2 class="text-xl font-bold mb-2">Contact us</h2>
+            <p class="mb-2">Get in touch. Tell us about your project today.</p>
+
+            <span class="flex font-bold text-compcolor hover:underline">
+            <a href="company.html">Get the touch you need</a>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </span>
+
+        </div>
+
+    </section> 
+    <!-- About section ends-->
+
+    <section class="shadow lg:mx-24 overflow-hidden">
+        <div class="lg:flex justify-between items-center text-center gap-12 overflow-hidden">
+            <div class="px-12 lg:w-1/2 mx-auto flex flex-col justify-center items-center text-center py-12 lg:py-0 transition ease" data-aos="slide-left" data-aos-duration="2000" data-aos-offset="100">
+                <h4 class="font-poppins text-input text-2xl lg:text-3xl lg:mt- mb-8 uppercase font-bold italic">Who we are</h4>
+                <p class="text-gray-500 text-justify text-lg leading-8">Shorebricks is a team of design experts building and remodeling the Nigeria real estate landsacpe. We are not just building new homes; we are building trust, the kind of trust that can only be built through honest client relationships
+                    and years of hard work.</p>
+                <p class="text-gray-500 text-justify text-lg  leading-8 mt-6">From the planning and design stages, all the way through to the building process, it’s our mission to exceed your expectations</p>
+
+            </div>
+
+            <div class="w-1/2 z-30">
+                <div class="hidden lg:block parallax4 bg-white h-56"></div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Vision, mission, values section-->
+    <section class="mx-auto text-input lg:mx-24 my-8 overflow-hidden flex jusify-center items-center" data-aos="fade-up-left" data-aos-duration="2000" data-aos-offset="200">
+
+
+        <!-- Grid container -->
+        <div class="grid md:grid-cols-1 lg:grid-cols-3 md:gap-6 lg:gap-10 xl:gap-12 justify-center items-center space-y-12 md:space-y-0 mx-auto px-24">
+
+            <div class="overflow-hidden lg:border-2 transition all ease duration:700  hover:border-compcolor transform hover:-translate-y-2">
+                <div class="flex flex-col items-center border-2 lg:border-none">
+                    <img src="img/house12.jpg" alt="" class="w-full h-60 object-cover">
+                    <h4 class="font-bold text-2xl lg:text-3xl xl:text-4xl mt-10 md:mt-12 xl:mt-16 mb-4 text-input"> Our Vision</h4>
+                    <p class="w-5/6 pb-12 text-center text-lg">To be the industry benchmark for designs and finishing in Africa by 2030 </p>
+                </div>
+            </div>
+
+            <div class="overflow-hidden lg:border-2 transition all ease duration:700 hover:border-compcolor transform hover:-translate-y-2">
+                <div class="flex flex-col items-center border-2 lg:border-none">
+                    <img src="img/house13.jpg" alt="" class="w-full h-60 object-cover">
+                    <h4 class="font-bold text-2xl lg:text-3xl xl:text-4xl mt-10 md:mt-12 xl:mt-16 mb-4 text-input"> Our Mission</h4>
+                    <p class="w-5/6 mb-12 text-center text-lg">To design and build properties that inspire the creative, excites the commonly and </p>
+                </div>
+            </div>
+            <div class="overflow-hidden lg:border-2 transition all ease duration:700 hover:border-compcolor transform hover:-translate-y-2">
+                <div class="flex flex-col items-center border-2 lg:border-none">
+                    <img src="img/house14.jpg" alt="" class="w-full h-60 object-cover">
+                    <h4 class="font-bold text-2xl lg:text-3xl xl:text-4xl mt-10 md:mt-12 xl:mt-16 mb-4 text-input"> Our Values</h4>
+                    <p class="w-5/6 mb-12 text-center text-lg">You can TRUST that we are a team of high INTEGRITY professionals building quality home</p>
+                </div>
+            </div>
+
+        </div>
+
+        </div>
+    </section>
+
+    <!-- Projects section -->
+    <section class="mx-auto flex flex-col justify-center items-center md:py-12 lg:w-10/12" data-aos="slide-right" data-aos-duration="2000" data-aos-offset="100" data-aos-anchor-placement="top-bottom" data-aos-once="true">
+
+        <h4 class="text-2xl lg:text-4xl text-compcolor pb-2 lg:mb-4 font-semibold text-center">Our Projects</h4>
+        <p class="text-input text-center mb-6 lg:mb-12 text-lg lg:text-2xl px-12  md:px-24 lg:px-44 xl:px-72">Browse our collection of custom homes brought to life by our experienced custom builders.</p>
+
+        <div class="grid grid-col-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-center md:justify-center overflow-hidden text-input gap-y-8 md:gap-y-6 md:mx-0 pb-12">
+
+            <!-- Card 1 -->
+            <div class="card group">
+
+                <img src="img/house8.jpg " alt=" " class="w-full h-full object-cover bg-cover">
+
+                <!-- Card content -->
+                <div class="card-content  overlay-bg2 opacity-0 group-hover:opacity-100">
+                    <p class="mb-8 text-center fade-in">Megamound Estate, Lagos</p>
+                    <a href="" class="btn  border-2 border-compcolor lg:uppercase text-sm lg:text-sm text-center fade-in opacity-75 leading-5">View all images</a></div>
+
+            </div>
+            <!-- Card 2 -->
+            <div class="card group">
+
+                <img src="img/projectAbu.JPG " alt=" " class="w-full h-full object-cover bg-cover">
+
+                <!-- Card content -->
+                <div class="card-content overlay-bg2 opacity-0 group-hover:opacity-100">
+                    <p class="mb-8 text-center fade-in">Royal Gardens Estate, Lagos</p>
+                    <a href="" class="btn  border-2 border-compcolor lg:uppercase text-sm lg:text-sm text-center fade-in opacity-75">View all images</a></div>
+
+            </div>
+            <!-- Card 3 -->
+            <div class="card group">
+
+                <img src="img/projectFlyn.JPG " alt=" " class="w-full h-full object-cover bg-cover bg-left-top">
+
+                <!-- Card content -->
+                <div class="card-content overlay-bg2 opacity-0 group-hover:opacity-100">
+                    <p class="mb-8 text-center fade-in">Royal Gardens Estate, Lagos</p>
+                    <a href="" class="btn  border-2 border-compcolor lg:uppercase text-sm lg:text-sm text-center fade-in opacity-75">View all images</a></div>
+
+            </div>
+            <!-- Card 4 -->
+            <div class="card group">
+
+                <img src="img/project1.JPG " alt=" " class="w-full h-full bg-cover bg-fixed">
+
+                <!-- Card content -->
+                <div class="card-content overlay-bg2 opacity-0 group-hover:opacity-100">
+                    <p class="mb-8 text-center fade-in">Megamound Estate, Lagos</p>
+                    <a href="" class="btn  border-2 border-compcolor uppercase text-xs md:text-sm lg:text-sm text-center fade-in opacity-75">View all images</a></div>
+
+            </div>
+            <!-- Card 5 -->
+            <div class="relative card items-center justify-center text-compcolor w-full h-72 object-cover overflow-auto group">
+
+                <img src="img/house5.jpg " alt=" " class="w-full h-full object-cover bg-cover bg-left-top">
+                <!-- Card content -->
+                <div class="absolute overlay-bg2 py-16 px-24 text-white z-40 flex flex-col justify-center items-center transition ease-in duration-1000 opacity-0 group-hover:opacity-100">
+                    <p class="mb-8 text-center fade-in">Megamound Estate, Lagos</p>
+                    <a href="" class="btn  border-2 border-compcolor lg:uppercase text-sm lg:text-sm text-center fade-in opacity-75">View all images</a></div>
+
+            </div>
+            <!-- Card 6 -->
+            <div class="card group">
+
+                <img src="img/house2.JPG " alt=" " class="w-full h-full object-cover bg-cover bg-left-top">
+
+                <!-- Card content -->
+                <div class="card-content overlay-bg2 opacity-0 group-hover:opacity-100">
+                    <p class="mb-8 text-center fade-in">Megamound Estate, Lagos</p>
+                    <a href="" class="btn  border-2 border-compcolor uppercase text-sm text-center fade-in opacity-75">View all images</a></div>
+
+            </div>
+        </div>
+
+        <button class="btn">
+        <a href="projects.html" class="bg-body text-white lg:text-lg btn align-center">View All Projects</a>
+    </button>
+    </section>
+
+    <!-- Contact form -->
+
+    <section class="mx-12 lg:ml-24 mb-12 text-input">
+        <div class="flex flex-col lg:flex-row justify- gap-56">
+
+            <span class="py-8 ">
+                <h2 class="text-2xl lg:text-3xl font-bold Uppercase mb-4 text-compcolor">Get In Touch</h2>
+                <p class="mb-10">Contact us today to get one step closer to the home you’ve always wanted.</p>
+                <div class="mt-8 max-w-md">
+                    <div class="grid grid-cols-1 gap-6">
+                        <label class="block">
+                      <span class="text-gray-700">Full name</span>
+            <input type="text" class="
+                          mt-1
+                          block
+                          w-full
+                          rounded-md
+                          border-gray-300
+                          shadow-sm
+                          focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50
+                        " placeholder="" />
+            </label>
+            <label class="block">
+                      <span class="text-gray-700">Email address</span>
+                      <input
+                        type="email"
+                        class="
+                          mt-1
+                          block
+                          w-full
+                          rounded-md
+                          border-gray-300
+                          shadow-sm
+                          focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50
+                        "
+                        placeholder="john@example.com"
+                      />
+                    </label>
+
+            <label class="block">
+                      <span class="text-gray-700">What type of project?</span>
+                      <select
+                        class="
+                          block
+                          w-full
+                          mt-1
+                          rounded-md
+                          border-gray-300
+                          shadow-sm
+                          focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50
+                        "
+                      >
+                        <option>Residential</option>
+                        <option>Commercial</option>
+                      </select>
+                    </label>
+            <label class="block">
+                      <span class="text-gray-700">Additional details</span>
+                      <textarea
+                        class="
+                          mt-1
+                          block
+                          w-full
+                          rounded-md
+                          border-gray-300
+                          shadow-sm
+                          focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50
+                        "
+                        rows="3"
+                      ></textarea>
+                    </label>
+            <div class="block">
+                <div class="mt-2">
+                    <div>
+                        <label class="inline-flex items-center">
+                            <input
+                              type="checkbox"
+                              class="
+                                rounded
+                                border-gray-300
+                                text-indigo-600
+                                shadow-sm
+                                focus:border-indigo-300
+                                focus:ring
+                                focus:ring-offset-0
+                                focus:ring-indigo-200
+                                focus:ring-opacity-50
+                              "
+                              checked
+                            />
+                            <span class="ml-2">Email me news and real estate offers</span>
+                          </label>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        </div>
+        <button class="btn bg-compcolor mb-12: mt-8 md:mt-12">Send</button>
+        </span>
+
+
+    </section>
+
+    <!-- Social section -->
+    <div class="text-white bg-gray-100 md:flex items-center md:py-4 font-poppins mx-auto">
+        <div class="md:rounded text-sm text-white bg-compcolor shadow-md flex items-center md:w-11/12 mx-auto px-12 md:px-20 py-6">
+            <h4 class=" mr-8 text-lg">Follow Shorebricks</h4>
+            <a href=" " class="mr-4 opacity-80 hover:opacity-100 "><i class="fa fa-twitter fa-2x " aria-hidden="true "></i></a>
+            <a href="www.facebook.com/shorebricks " class="mr-4 opacity-80 hover:opacity-100 ">
+                <i class="fa fa-facebook-official fa-2x " aria-hidden="true "></i>
+            </a>
+            <a href=" " class="opacity-80 hover:opacity-100 "><i class="fa fa-instagram fa-2x " aria-hidden="true "></i></a>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="bg-input py-8 px-24">
+        <div class="grid md:grid-cols-3 md:justify-center gap-8 space-y-6 md:space-y-0">
+
+            <div class="">
+                <a href="index.html">
+                    <img src="img/logo3.png" alt="" class="w-32 lg:w-48 bg-transparent">
+                </a>
+
+                <p class="mt-4">
+                    logo3.png Necessity
+                </p>
+            </div>
+
+            <div class="space-y-4">
+                <h4 class="font-bold text-lg mb-5">Office</h4>
+                <p class="flex text-sm">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                </svg> Gani Adebayo Close, Lekki Expressway <br> Lagos, Nigeria
+                </p>
+                <p class="flex text-sm">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2M5 3a2 2 0 00-2 2v1c0 8.284 6.716 15 15 15h1a2 2 0 002-2v-3.28a1 1 0 00-.684-.948l-4.493-1.498a1 1 0 00-1.21.502l-1.13 2.257a11.042 11.042 0 01-5.516-5.517l2.257-1.128a1 1 0 00.502-1.21L9.228 3.683A1 1 0 008.279 3H5z" />
+                </svg>09056538331
+                </p>
+                <p class="flex text-sm">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>shorebricks@yahoo.com
+                </p>
+            </div>
+
+            <div>
+                <h4 class="mb-5 font-bold text-lg">Useful Links</h4>
+                <span class="flex flex-col space-y-5">
+              <a href="index.html">Home</a>
+              <a href="contact.html">Contact</a>
+              <a href="privacy.html">Privacy Policy</a>
+          </span>
+            </div>
+
+        </div>
+
+        <p class="text-center mt-12">
+            Copyright &copy; 2022 Shorebricks
+        </p>
+    </footer>
+
+    <script type="text/javascript">
+        var counter = 1;
+        setInterval(function() {
+            document.getElementById('radio' + counter).checked = true;
+            counter++;
+            if (counter > 4) {
+                counter = 1;
+            }
+        }, 5000);
+    </script>
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 100,
+            duration: 1000
+        });
+    </script>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
+
+</html>
+
+</html>design-build.html
