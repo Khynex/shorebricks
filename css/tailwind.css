@@ -19,7 +19,7 @@
 }
 
 .card {
-  @apply relative bg-white overflow-hidden rounded shadow-lg flex flex-col items-center justify-center text-compcolor w-full h-72 object-cover hover:bg-gray-400;
+  @apply relative bg-white overflow-hidden rounded md:rounded shadow-lg flex flex-col items-center justify-center text-compcolor w-full h-72 object-cover hover:bg-gray-400;
 }
 
 .card-content {
