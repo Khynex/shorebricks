@@ -3,15 +3,15 @@
 @tailwind utilities;
 
 .btn {
-  @apply rounded-lg transform transition duration-500 hover:scale-95 text-white py-2 px-4;
+  @apply rounded-lg transform transition duration-500 hover:scale-95 text-white py-2 px-4 cursor-pointer;
 }
 
 .btn2 {
-  @apply rounded-lg transform transition duration-500 hover:scale-95 text-white py-1 px-6;
+  @apply rounded-lg transform transition duration-500 hover:scale-95 text-white py-1 px-6 cursor-pointer;
 }
 
 .btn3 {
-  @apply rounded-full transform transition duration-500 hover:scale-95 text-white text-lg py-4 px-6;
+  @apply rounded-full transform transition duration-500 hover:scale-95 text-white text-lg py-4 px-6 cursor-pointer;
 }
 
 .nav-up {

@@ -85,7 +85,7 @@
     <!-- Header -->
 
     <header class="fixed nav-down top-0 left-0 w-full bg-input
-        text-white font-nunito z-50 transition-all ease-in duration-500" id="menu-list">
+        text-white font-nunito z-50 transition-all ease-in duration-500">
         <div class="mx-auto px-8 md:px-14 lg:px-12 xl:px-16 py-4 lg:py-0 flex justify-between items-center">
             <!-- Logo -->
 
@@ -121,7 +121,7 @@
 
             <nav class="hidden lg:flex items-center justify-center nav-links text-xs lg:text-sm cursor-pointer z-40 nav_bar">
                 <ul class="md:flex justify-center items-center space-x-6 lg:space-x-12 ml-12 xl:ml-50">
-                    <li class="hover:text-compcolor"><a href="index.html">Home</a></li>
+                    <li class="hover:text-compcolor uppercase"><a href="index.html">Home</a></li>
                     <li class="hover:text-compcolor uppercase"><a href="about.html">About Us</a></li>
                     <li class="hover:text-compcolor overflow-auto uppercase"><a href="projects.html">Projects</a></li>
 
@@ -132,16 +132,8 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
                                     </svg>
 
-                        <!-- <div class="absolute top-0 bg-gray-200 flex-col rounded w-screen mt- p-3  text-sm text-input font-bold dropdown-content z-50  animate__animated animate__fadeIn fade-in">
 
-                                <a href="design-build.html" class="px-2 py-3 hover:bg-compcolor hover:opacity-95 hover:text-white rounded">Design-Build Services</a>
-                                <a href="homeremodelling.html" class="px-2 py-3 hover:bg-compcolor hover:opacity-95 hover:text-white rounded">Home Remodelling</a>
-                                <a href="realestate.html" class="px-2 py-3 hover:bg-compcolor hover:opacity-95 hover:text-white rounded">Real Estate </a>
-                                <a href="constructionmanagement.html" class="px-2 py-3 hover:bg-compcolor hover:opacity-95 hover:text-white rounded text-sm">Construction Management</a>
-                                <a href="consultancy.html" class="px-2 py-3 hover:bg-compcolor hover:opacity-95 hover:text-white rounded">Consultancy Services</a>
-                            </div> -->
-
-                        <div class="absolute top-0  mx-auto bg-gray-300 flex-col w-screen  text-sm text-input font-bold dropdown-content z-30  animate__animated animate__slideInDown animate_delay-1s">
+                        <div class="absolute top-0  mx-auto bg-gray-300 flex-col w-screen text-sm text-input font-bold dropdown-content z-30  animate__animated animate__slideInDown animate_delay-1s">
 
                             <div class="mt-4">
                                 <h4 class="font-sans font-bold text-2xl pl-32 py-8 uppercase">Services</h4>
@@ -190,17 +182,6 @@
                                     Other Services
                                 </h4>
 
-                                <!-- <div>
-                                        <ul>
-                                            <li>
-                                                <a href="#">Stamped Concrete</a>
-                                                <a href="#">Car Park</a>
-                                                <a href="#">Automated Swimming pool cover</a>
-                                                <a href="#"></a>
-                                                <a href="#"></a>
-                                            </li>
-                                        </ul>
-                                    </div> -->
                                 <div class="table w-full ...">
                                     <div class="table-header-group ...">
 
@@ -255,23 +236,23 @@
     <!-- Header ends -->
 
     <!-- Gallery grid -->
-    <section class="container mx-auto w-10/12">
+    <section class="container mx-auto px-4 lg:px-0 lg:w-10/12">
 
-        <div class="px-72 py-8 pt-32">
-            <h4 class="text-center text-gray-600 text-2xl mb-10 uppercase font-semibold font-sans">Project Tuna, Royal Gardens Estate</h4>
+        <div class="lg:px-72 lg:py-8 pt-20 lg:pt-32 mb-4">
+            <h4 class="lg:text-center text-gray-600 lg:text-2xl mb-6 lg:mb-10 uppercase font-semibold font-sans">Project Tuna, Royal Gardens Estate</h4>
             <img src="./images/project-Abu/abu.JPG" class="w-full h-[500px] object-cover bg-center" alt="">
         </div>
 
         <!-- Grid content -->
-        <div class="gallery grid md:grid-cols-2 lg:grid-cols-4 grid-rows-2 gap-8 justify-center items-center mb-12">
-            <div class="col-span-2">
+        <div class="gallery grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:grid-rows-2 lg:gap-8 justify-center items-center lg:mb-12 space-y-6">
+            <div class="col-span-1 lg:col-span-2">
                 <a href="./images/project-Abu/1.jpg" data-lightbox="Houses" data-title="">
-                    <img src="./images/project-Abu/1.jpg" class="w-full h-72 object-cover bg-center col-span-1 row-span-3" alt="">
+                    <img src="./images/project-Abu/1.jpg" class="w-full h-72 object-cover bg-center lg:col-span-1 lg:row-span-3" alt="">
                 </a>
             </div>
             <div>
                 <a href="./images/project-Abu/2.jpg" data-lightbox="Houses" data-title="">
-                    <img src="./images/project-Abu/2.jpg" class="w-full h-72 object-cover bg-center" alt="">
+                    <img src="./images/project-Abu/2.jpg" class="w-full h-72 bg-cover bg-center" alt="">
                 </a>
             </div>
             <div>
@@ -303,11 +284,11 @@
     </section>
     <!-- Gallery grid ends -->
 
-    <!-- See more -->
-    <section class="mx-auto flex flex-col justify-center items-center pt-10 md:py-12 lg:w-10/12" data-aos-offset="200">
+    <!-- See more projects-->
+    <section class="mx-auto flex flex-col justify-center px-4 lg:items-center pt-10 md:py-12 lg:w-10/12" data-aos-offset="200">
 
-        <div class="" data-aos="slide-up" data-aos-duration="2000" data-aos-offset="200" data-aos-anchor-placement="top-bottom" data-aos-once="true">
-            <h4 class="text-2xl lg:text-4xl text-gray-500 pb-6 lg:mb-4 font-semibold text-center">See More Projects</h4>
+        <div class="border-b-2 lg:border-none mb-5" data-aos="slide-up" data-aos-duration="2000" data-aos-offset="200" data-aos-anchor-placement="top-bottom" data-aos-once="true">
+            <h4 class="text-2xl lg:text-4xl text-gray-500 pb-2 lg:pb-6 lg:mb-4 font-semibold lg:text-center ml-6">See More Projects</h4>
 
         </div>
 
@@ -327,7 +308,7 @@
             <!-- Card 2 -->
             <div class="card group" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="300" data-aos-anchor-placement="top-bottom" data-aos-once="true">
 
-                <img src="images/projectAbu.JPG " alt=" " class="w-full h-full object-cover bg-cover">
+                <img src="images/projectAbu.JPG " alt=" " class="w-full h-full object-cover">
 
                 <!-- Card content -->
                 <div class="card-content overlay-bg2 opacity-0 group-hover:opacity-100">
@@ -347,8 +328,8 @@
 
             </div>
 
-            <div>
-                <a href="" class="btn  border-2 border-compcolor uppercase text-sm text-center fade-in opacity-75">View all images</a>
+            <div class="text-center">
+                <a href="" class="btn  border-2 lg:border-compcolor uppercase text-sm text-center fade-in opacity-75 bg-input">View all images</a>
 
 
             </div>
@@ -356,7 +337,7 @@
 
         <!-- Contact form -->
 
-        <section class=" mx-auto w-10/12 mb-12 text-input border p-8 bg-gray-200 ">
+        <section class=" mx-auto lg:w-10/12 mb-12 text-input border p-8 bg-gray-200 ">
             <div class="flex flex-row justify- gap-56 ">
 
                 <span class="py-8 ">
@@ -440,8 +421,8 @@
 
 
         <!-- Social section -->
-        <div class="text-white bg-gray-100 md:flex items-center md:py-4 font-poppins mx-auto ">
-            <div class="md:rounded text-sm text-white bg-compcolor shadow-md flex items-center md:w-11/12 mx-auto px-12 md:px-20 py-6 ">
+        <div class="text-white bg-gray-100 md:flex items-center md:py-4 font-poppins mb-4">
+            <div class="md:rounded text-sm text-white bg-compcolor shadow-md flex items-center lg:w-11/12 mx-auto px-12 md:px-10 py-6 ">
                 <h4 class=" mr-8 text-lg ">Follow Shorebricks</h4>
                 <a href=" " class="mr-4 opacity-80 hover:opacity-100 "><i class="fa fa-twitter fa-2x " aria-hidden="true "></i></a>
                 <a href="www.facebook.com/shorebricks " class="mr-4 opacity-80 hover:opacity-100 ">
@@ -452,8 +433,20 @@
         </div>
 
 
+        <!-- Social section -->
+        <div class="text-white bg-gray-100 mt-12 md:flex items-center md:py-4 font-poppins mx-auto ">
+            <div class="md:rounded text-sm text-white bg-compcolor shadow-md flex items-center md:w-11/12 mx-auto px-12 md:px-20 py-6 ">
+                <h4 class=" mr-8 text-lg ">Follow Shorebricks</h4>
+                <a href="https://www.twitter.com/shorebricks " class="mr-4 opacity-80 hover:opacity-100 "><i class="fa fa-twitter fa-2x " aria-hidden="true "></i></a>
+                <a href="https://www.facebook.com/shorebricks " class="mr-4 opacity-80 hover:opacity-100 ">
+                    <i class="fa fa-facebook-official fa-2x " aria-hidden="true "></i>
+                </a>
+                <a href="https://www.instagram.com/shorebricks " class="opacity-80 hover:opacity-100 "><i class="fa fa-instagram fa-2x " aria-hidden="true "></i></a>
+            </div>
+        </div>
+
         <!-- Footer -->
-        <footer class="bg-input py-8 px-24 ">
+        <footer class="bg-input pt-8 px-10 md:px-16 lg:px-24 ">
             <div class="grid md:grid-cols-3 md:justify-center gap-8 space-y-6 md:space-y-0 ">
 
                 <div class=" ">
@@ -461,40 +454,41 @@
                         <img src="images/logo3.png " alt=" " class="w-32 lg:w-48 bg-transparent ">
                     </a>
 
+
                 </div>
 
                 <div class="space-y-4 ">
                     <h4 class="font-bold text-lg mb-5 ">Office</h4>
                     <p class="flex text-sm ">
                         <svg xmlns="http://www.w3.org/2000/svg " class="h-6 w-5 mr-2 " fill="none " viewBox="0 0 24 24 " stroke="currentColor ">
-                  <path stroke-linecap="round " stroke-linejoin="round " stroke-width="2 " d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4 " />
-                </svg> Gani Adebayo Close, Lekki Expressway <br> Lagos, Nigeria
+                        <path stroke-linecap="round " stroke-linejoin="round " stroke-width="2 " d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4 " />
+                      </svg> Gani Adebayo Close, Lekki Expressway <br> Lagos, Nigeria
                     </p>
                     <p class="flex text-sm ">
                         <svg xmlns="http://www.w3.org/2000/svg " class="h-6 w-5 mr-2 " fill="none " viewBox="0 0 24 24 " stroke="currentColor ">
-                  <path stroke-linecap="round " stroke-linejoin="round " stroke-width="2 " d="M16 8l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2M5 3a2 2 0 00-2 2v1c0 8.284 6.716 15 15 15h1a2 2 0 002-2v-3.28a1 1 0 00-.684-.948l-4.493-1.498a1 1 0 00-1.21.502l-1.13 2.257a11.042
-                    11.042 0 01-5.516-5.517l2.257-1.128a1 1 0 00.502-1.21L9.228 3.683A1 1 0 008.279 3H5z " />
-                </svg>09056538331
+                        <path stroke-linecap="round " stroke-linejoin="round " stroke-width="2 " d="M16 8l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2M5 3a2 2 0 00-2 2v1c0 8.284 6.716 15 15 15h1a2 2 0 002-2v-3.28a1 1 0 00-.684-.948l-4.493-1.498a1 1 0 00-1.21.502l-1.13
+                                            2.257a11.042 11.042 0 01-5.516-5.517l2.257-1.128a1 1 0 00.502-1.21L9.228 3.683A1 1 0 008.279 3H5z " />
+                      </svg>09056538331
                     </p>
                     <p class="flex text-sm ">
                         <svg xmlns="http://www.w3.org/2000/svg " class="h-6 w-5 mr-2 " fill="none " viewBox="0 0 24 24 " stroke="currentColor ">
-                  <path stroke-linecap="round " stroke-linejoin="round " stroke-width="2 " d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z " />
-                </svg>shorebricks@yahoo.com
+                        <path stroke-linecap="round " stroke-linejoin="round " stroke-width="2 " d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z " />
+                      </svg>shorebricks@yahoo.com
                     </p>
                 </div>
 
                 <div>
                     <h4 class="mb-5 font-bold text-lg ">Useful Links</h4>
                     <span class="flex flex-col space-y-5 ">
-              <a href="index.html ">Home</a>
-              <a href="contact.html ">Contact</a>
-              <a href="privacy.html ">Privacy Policy</a>
-          </span>
+                    <a href="index.html ">Home</a>
+                    <a href="contact.html ">Contact</a>
+                    <a href="privacy.html ">Privacy Policy</a>
+                </span>
                 </div>
 
             </div>
 
-            <p class="text-center mt-12 ">
+            <p class="md:text-center mt-12 pb-8 ">
                 Copyright &copy; 2022 Shorebricks
             </p>
         </footer>

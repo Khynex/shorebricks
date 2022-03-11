@@ -6,9 +6,6 @@
   --menu-speed: 0.75s;
 }
 
-.transform-style {
-  transform-style: preserve-3d;
-}
 
 .overlay-bg2 {
   background-color: var(--overlay-color2);
@@ -219,7 +216,7 @@
   position: fixed;
   top: 0;
   right: 0;
-  z-index: 100;
+  z-index: 1;
 }
 
 .menu-wrap .toggler {
