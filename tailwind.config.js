@@ -11,7 +11,9 @@ module.exports = {
                 secondary: "#9191A4",
                 badge: "#3F3F51",
                 compcolor: "#e25822",
+                icon: "#00796A",
                 input: "#2A2A35",
+                input2: "#484848",
                 hero: "#094b",
                 facebook: "#3b5998",
                 instagram: "#fb3958"
