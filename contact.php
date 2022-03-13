@@ -37,7 +37,7 @@
 			$mail->SMTPSecure = "ssl";                 
 			$mail->Host       = "smtp.gmail.com";      
 			$mail->Port       = 465;             
-			$mail->AddAddress('astongemmy@gmail.com');  // Here is the address you want to send to
+			$mail->AddAddress('astongemmy@hotmail.com');  // Here is the address you want to send to
 			$mail->Username   ="astongemmy@gmail.com";  // I'm using my gmail account as email host. You will need to change to yours
 			$mail->Password   ="jddovqmailvexoej";  // Email host account password. When you create your gmail app password you replace it
 			$mail->SetFrom($email, $fullname);
