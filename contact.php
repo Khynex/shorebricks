@@ -1,3 +1,63 @@
+<?php
+	
+	// include phpmailer class
+	require_once 'mailer/class.phpmailer.php';
+    require_once 'mailer/class.smtp.php';
+
+	$mail = new PHPMailer(true);	
+	
+	if (isset($_POST['submit-btn'])) {
+		
+		$fullname  = strip_tags($_POST['fullname']);
+		$email      = strip_tags($_POST['email']);
+        $additional_details     = strip_tags($_POST['additional_details']);
+        $project_type      = strip_tags($_POST['project_type']);
+        
+        $subject = 'New Contact Email';
+        $message = "<div style='padding:25px 16px;background-color:#121212;color:white;line-height:1.5;'>
+            <h2>Dear <strong>{$fullname}!</strong></h2>
+
+            <h1> &#128640; New Message from Shorebricks</h1>
+            
+            <p style='font-size:16px;padding:20px 20px;margin:10px auto 20px auto;background-color:#222222;border-radius:10px;line-height:1.7;'>
+                {$additional_details}
+            </p>
+            
+            <span style='font-size:15px;color:#606060;display:block;'>
+                Project type: {$project_type}
+            </span>
+            
+        </div>";
+        
+        try	{			
+			$mail->IsSMTP(); 
+			$mail->isHTML(true);
+			$mail->SMTPDebug  = 0;                     
+			$mail->SMTPAuth   = true;                  
+			$mail->SMTPSecure = "ssl";                 
+			$mail->Host       = "smtp.gmail.com";      
+			$mail->Port       = 465;             
+			$mail->AddAddress('astongemmy@gmail.com');  // Here is the address you want to send to
+			$mail->Username   ="astongemmy@gmail.com";  // I'm using my gmail account as email host. You will need to change to yours
+			$mail->Password   ="jddovqmailvexoej";  // Email host account password. When you create your gmail app password you replace it
+			$mail->SetFrom($email, $fullname);
+			$mail->AddReplyTo($email, $fullname);
+			$mail->Subject    = $subject;
+			$mail->Body 	  = $message;
+			$mail->AltBody    = $message;
+			
+			if ($mail->Send()) {				
+				$msg = "<div class='alert alert-success'> Hi, ".$fullname." your mail was successfully sent</div>";				
+			}
+		
+		} catch(phpmailerException $ex) {			
+			$msg = "<div class='alert alert-warning'>".$ex->errorMessage()."</div>";			
+		}
+		
+	}	
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -260,101 +320,49 @@
     <section class="mx-auto lg:w-10/12 mb-12 text-input border p-8 bg-gray-200">
         <div class="flex flex-row justify- gap-56">
 
-            <span class="py-8 ">
+            <form id="contact-form" action="" method="POST" class="py-8">
                 <h2 class="text-2xl lg:text-3xl font-bold Uppercase mb-4 text-compcolor">Get In Touch</h2>
                 <p class="mb-10">Contact us today to get one step closer to the home you’ve always wanted.</p>
+                <?php echo $msg; ?>
                 <div class="mt-8 max-w-md">
                     <div class="grid grid-cols-1 gap-6">
                         <label class="block">
-                      <span class="text-gray-700">Full name</span>
-            <input type="text" class="
-                          mt-1
-                          block
-                          w-full
-                          rounded-md
-                          border-gray-300
-                          shadow-sm
-                          focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50
-                        " placeholder="" />
-            </label>
-            <label class="block">
-                      <span class="text-gray-700">Email address</span>
-                      <input
-                        type="email"
-                        class="
-                          mt-1
-                          block
-                          w-full
-                          rounded-md
-                          border-gray-300
-                          shadow-sm
-                          focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50
-                        "
-                        placeholder="john@example.com"
-                      />
-                    </label>
+                            <span class="text-gray-700">Full name</span>
+                            <input type="text" name="fullname" id="fullname" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" placeholder="" />
+                        </label>
+                        <label class="block">
+                            <span class="text-gray-700">Email address</span>
+                            <input type="email" name="email" id="email" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" placeholder="john@example.com"/>
+                        </label>
 
-            <label class="block">
-                      <span class="text-gray-700">What type of project?</span>
-                      <select
-                        class="
-                          block
-                          w-full
-                          mt-1
-                          rounded-md
-                          border-gray-300
-                          shadow-sm
-                          focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50
-                        "
-                      >
-                        <option>Residential</option>
-                        <option>Commercial</option>
-                      </select>
-                    </label>
-            <label class="block">
-                      <span class="text-gray-700">Additional details</span>
-                      <textarea
-                        class="
-                          mt-1
-                          block
-                          w-full
-                          rounded-md
-                          border-gray-300
-                          shadow-sm
-                          focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50
-                        "
-                        rows="3"
-                      ></textarea>
-                    </label>
-            <div class="block">
-                <div class="mt-2">
-                    <div>
-                        <label class="inline-flex items-center">
-                            <input
-                              type="checkbox"
-                              class="
-                                rounded
-                                border-gray-300
-                                text-indigo-600
-                                shadow-sm
-                                focus:border-indigo-300
-                                focus:ring
-                                focus:ring-offset-0
-                                focus:ring-indigo-200
-                                focus:ring-opacity-50
-                              "
-                              checked
-                            />
-                            <span class="ml-2">Email me news and real estate offers</span>
-                          </label>
+                        <label class="block">
+                            <span class="text-gray-700">What type of project?</span>
+                            <select  name="project_type" id="project_type" class="block w-full mt-1 rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                                <option value="residential">Residential</option>
+                                <option value="commercial">Commercial</option>
+                            </select>
+                        </label>
+                        
+                        <label class="block">
+                            <span class="text-gray-700">Additional details</span>
+                            <textarea name="additional_details" id="additional_details" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" rows="3"></textarea>
+                        </label>
+                        
+                        <div class="block">
+                            <div class="mt-2">
+                                <div>
+                                    <label class="inline-flex items-center">
+                                        <input type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-300 focus:ring focus:ring-offset-0 focus:ring-indigo-200 focus:ring-opacity-50" checked/>
+                                        <span class="ml-2">Email me news and real estate offers</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
-            </div>
-
-        </div>
-        </div>
-        <button class="btn bg-compcolor mb-12: mt-8 md:mt-12">Send</button>
-        </span>
+                <button type="submit" name="submit-btn" id="submit-btn" class="btn bg-compcolor mb-12: mt-8 md:mt-12">Send</button>
+            </form>
 
         <!-- Contact address -->
         <div class="hidden lg:block space-y-4">
@@ -381,19 +389,6 @@
     </section>
 
 
-    <!-- Social section -->
-    <div class="text-white bg-gray-100 md:flex items-center md:py-4 font-poppins mx-auto">
-        <div class="md:rounded text-sm text-white bg-compcolor shadow-md flex items-center md:w-11/12 mx-auto px-12 md:px-20 py-6">
-            <h4 class=" mr-8 text-lg">Follow Shorebricks</h4>
-            <a href=" " class="mr-4 opacity-80 hover:opacity-100 "><i class="fa fa-twitter fa-2x " aria-hidden="true "></i></a>
-            <a href="www.facebook.com/shorebricks " class="mr-4 opacity-80 hover:opacity-100 ">
-                <i class="fa fa-facebook-official fa-2x " aria-hidden="true "></i>
-            </a>
-            <a href=" " class="opacity-80 hover:opacity-100 "><i class="fa fa-instagram fa-2x " aria-hidden="true "></i></a>
-        </div>
-    </div>
-
-
     <!-- Footer -->
     <footer class="bg-input pt-8 px-10 md:px-16 lg:px-24 ">
         <div class="grid md:grid-cols-3 md:justify-center gap-8 space-y-6 md:space-y-0 ">
@@ -405,41 +400,35 @@
 
                 <div class="text-sm text-white mx-auto py-6 ">
 
-                    <a href="https://www.twitter.com/shorebricks " class="mr-4 opacity-80 hover:opacity-100 "><i class="fa fa-twitter fa-2x " aria-hidden="true "></i></a>
-                    <a href="https://www.facebook.com/shorebricks " class="mr-4 opacity-80 hover:opacity-100 ">
-                        <i class="fa fa-facebook-official fa-2x " aria-hidden="true "></i>
-                    </a>
-                    <a href="https://www.instagram.com/shorebricks " class="opacity-80 hover:opacity-100 "><i class="fa fa-instagram fa-2x " aria-hidden="true "></i></a>
-                </div>
             </div>
 
             <div class="space-y-4 ">
                 <h4 class="font-bold text-lg mb-5 ">Office</h4>
                 <p class="flex text-sm ">
                     <svg xmlns="http://www.w3.org/2000/svg " class="h-6 w-5 mr-2 " fill="none " viewBox="0 0 24 24 " stroke="currentColor ">
-                        <path stroke-linecap="round " stroke-linejoin="round " stroke-width="2 " d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4 " />
-                      </svg> Gani Adebayo Close, Lekki Expressway <br> Lagos, Nigeria
+                    <path stroke-linecap="round " stroke-linejoin="round " stroke-width="2 " d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4 " />
+                  </svg> Gani Adebayo Close, Lekki Expressway <br> Lagos, Nigeria
                 </p>
                 <p class="flex text-sm ">
                     <svg xmlns="http://www.w3.org/2000/svg " class="h-6 w-5 mr-2 " fill="none " viewBox="0 0 24 24 " stroke="currentColor ">
-                        <path stroke-linecap="round " stroke-linejoin="round " stroke-width="2 " d="M16 8l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2M5 3a2 2 0 00-2 2v1c0 8.284 6.716 15 15 15h1a2 2 0 002-2v-3.28a1 1 0 00-.684-.948l-4.493-1.498a1 1 0 00-1.21.502l-1.13
-                                            2.257a11.042 11.042 0 01-5.516-5.517l2.257-1.128a1 1 0 00.502-1.21L9.228 3.683A1 1 0 008.279 3H5z " />
-                      </svg>09056538331
+                    <path stroke-linecap="round " stroke-linejoin="round " stroke-width="2 " d="M16 8l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2M5 3a2 2 0 00-2 2v1c0 8.284 6.716 15 15 15h1a2 2 0 002-2v-3.28a1 1 0 00-.684-.948l-4.493-1.498a1 1 0 00-1.21.502l-1.13
+                                        2.257a11.042 11.042 0 01-5.516-5.517l2.257-1.128a1 1 0 00.502-1.21L9.228 3.683A1 1 0 008.279 3H5z " />
+                  </svg>09056538331
                 </p>
                 <p class="flex text-sm ">
                     <svg xmlns="http://www.w3.org/2000/svg " class="h-6 w-5 mr-2 " fill="none " viewBox="0 0 24 24 " stroke="currentColor ">
-                        <path stroke-linecap="round " stroke-linejoin="round " stroke-width="2 " d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z " />
-                      </svg>shorebricks@yahoo.com
+                    <path stroke-linecap="round " stroke-linejoin="round " stroke-width="2 " d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z " />
+                  </svg>shorebricks@yahoo.com
                 </p>
             </div>
 
             <div>
                 <h4 class="mb-5 font-bold text-lg ">Useful Links</h4>
                 <span class="flex flex-col space-y-5 ">
-                    <a href="index.html ">Home</a>
-                    <a href="contact.html ">Contact</a>
-                    <a href="privacy.html ">About</a>
-                </span>
+                <a href="index.html ">Home</a>
+                <a href="contact.html ">Contact</a>
+                <a href="privacy.html ">Privacy Policy</a>
+            </span>
             </div>
 
         </div>
@@ -469,7 +458,49 @@
         });
     </script>
 
-    <script src="./app.js"></script>
+    <!-- I was using this javascript to run it before but it wasn't working so I decided to do it the manual way to be sure what was wrong -->
+    <script type="text/javascript">
+        // const contactForm = document.querySelector('#contact-form');
+        // contactForm.addEventListener('submit', function(e) {
+        //     e.preventDefault()
+        //     const email = contactForm.querySelector('#email').value;
+        //     const fullname = contactForm.querySelector('#fullname').value;
+        //     const project_type = contactForm.querySelector('#project_type').value;
+        //     const additional_details = contactForm.querySelector('#additional_details').value;
+        //     const submit_btn = contactForm.querySelector('#submit-btn');
+        //     const emailObject = {
+        //         email: email,
+        //         fullname: fullname,
+        //         project_type: project_type,
+        //         additional_details: additional_details
+        //     }
+        //     submit_btn.textContent = 'Sending...';
+        //     fetch("http://localhost/shorebricks/sendmail", {
+        //         method: 'POST',
+        //         mode: 'cors', // no-cors, *cors, same-origin
+        //         cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+        //         credentials: 'same-origin', // include, *same-origin, omit
+        //         headers: {
+        //             "Content-Type": "application/json"
+        //             // 'Content-Type': 'application/x-www-form-urlencoded',
+        //         },
+        //         body: JSON.stringify(emailObject)
+        //     }).then(function(result) {
+        //         return result.json();
+        //     }).then(function(data) {
+        //         if (data.status == 'success') {
+        //             submit_btn.textContent = 'Sent';
+        //         } else {
+        //             submit_btn.textContent = 'Error sending email';
+        //         }
+        //         setTimeout(() => {
+        //             submit_btn.textContent = 'Send';
+        //         }, 1000)
+        //     });
+        // })
+    </script>
+
+    <!-- <script src="./app.js"></script> -->
 </body>
 
 </html>
