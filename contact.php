@@ -1,8 +1,8 @@
 <?php
 	
 	// include phpmailer class
-	require_once 'mailer/class.phpmailer.php';
-    require_once 'mailer/class.smtp.php';
+	require_once '/mailer/class.phpmailer.php';
+    require_once '/mailer/class.smtp.php';
 
 	$mail = new PHPMailer(true);	
 	
@@ -164,7 +164,7 @@
                                 <li><a href="about.html">About</a></li>
                                 <li><a href="services.html">Services</a></li>
                                 <li><a href="projects.html">Projects</a></li>
-                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="contact.php">Contact</a></li>
 
                             </ul>
                             <div class=" lg:block mt-6 bg-compcolor rounded-lg py-2">
