@@ -1,8 +1,8 @@
 <?php
 	
 	// include phpmailer class
-	require_once '/mailer/class.phpmailer.php';
-    require_once '/mailer/class.smtp.php';
+	require_once 'mailer/class.phpmailer.php';
+    require_once 'mailer/class.smtp.php';
 
 	$mail = new PHPMailer(true);	
 	
