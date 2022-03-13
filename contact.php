@@ -411,6 +411,7 @@
                     <img src="images/logo3.png " alt=" " class="w-32 lg:w-48 bg-transparent ">
                 </a>
 
+                <div class="text-sm text-white mx-auto py-6 ">
 
             </div>
 
