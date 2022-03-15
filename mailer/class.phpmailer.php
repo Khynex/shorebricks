@@ -2100,7 +2100,7 @@ class PHPMailer {
       'bmp'   =>  'image/bmp',
       'gif'   =>  'image/gif',
       'jpeg'  =>  'image/jpeg',
-      'jpg'   =>  'image/jpeg',
+      'JPG'   =>  'image/jpeg',
       'jpe'   =>  'image/jpeg',
       'png'   =>  'image/png',
       'tiff'  =>  'image/tiff',

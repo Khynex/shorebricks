@@ -19,11 +19,11 @@
 }
 
 .card {
-  @apply relative bg-white overflow-hidden rounded md:rounded shadow-lg flex flex-col items-center justify-center text-compcolor w-full h-72 object-cover hover:bg-gray-400;
+  @apply relative bg-white overflow-hidden rounded md:rounded shadow-lg flex flex-col items-center justify-center text-compcolor w-full h-72 object-cover hover:bg-gray-400 ;
 }
 
 .card2 {
-  @apply relative bg-white overflow-hidden shadow-md flex flex-col items-center justify-center text-compcolor w-full h-72 object-cover;
+  @apply relative bg-white overflow-hidden shadow-md flex flex-col items-center justify-center text-compcolor w-full h-72 object-cover py-6;
 }
 
 .card-content {
